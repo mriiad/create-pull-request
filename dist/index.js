@@ -1112,6 +1112,7 @@ function run() {
                 draft: core.getBooleanInput('draft')
             };
             core.debug(`Inputs: ${(0, util_1.inspect)(inputs)}`);
+            core.info(`Inputs Data: ${JSON.stringify(inputs)}`);
             yield (0, create_pull_request_1.createPullRequest)(inputs);
         }
         catch (error) {

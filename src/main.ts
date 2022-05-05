@@ -28,6 +28,7 @@ async function run(): Promise<void> {
       draft: core.getBooleanInput('draft')
     }
     core.debug(`Inputs: ${inspect(inputs)}`)
+    core.info(`Inputs Data: ${JSON.stringify(inputs)}`)
 
     await createPullRequest(inputs)
   } catch (error: any) {
